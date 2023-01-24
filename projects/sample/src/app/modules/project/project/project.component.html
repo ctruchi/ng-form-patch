@@ -1,0 +1,27 @@
+<h1>Project</h1>
+
+<form>
+    <label>
+        Name
+        <input type="text" [(ngModel)]="project.name" name="name">
+    </label>
+    <label>
+        Category
+        <select [(ngModel)]="project.metadata.category" name="category">
+            <option *ngFor="let category of categories" [value]="category">{{category}}</option>
+        </select>
+    </label>
+
+    <h2>Modules</h2>
+
+    <div *ngFor="let module of project.modules" [ngModelGroup]="'module-' + module.id">
+        <label>
+            Name
+            <input type="text" [(ngModel)]="module.name" name="name">
+        </label>
+        <label>
+            Description
+            <input type="text" [(ngModel)]="module.description" name="description" patch-path="/description">
+        </label>
+    </div>
+</form>
