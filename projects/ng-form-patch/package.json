@@ -1,6 +1,6 @@
 {
   "name": "@ctruchi/ng-form-patch",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": false,
   "peerDependencies": {
     "@angular/common": "^14.2.8",
