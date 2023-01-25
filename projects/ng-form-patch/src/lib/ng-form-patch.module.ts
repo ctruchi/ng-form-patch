@@ -70,6 +70,9 @@ export interface FormPatchService {
 }
 
 export interface PatchOperation {
+    op: PatchOperationOperator;
     path: string;
     value: any;
 }
+
+export type PatchOperationOperator = 'replace' | 'add' | 'remove';

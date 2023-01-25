@@ -26,7 +26,11 @@ export class PatchService {
                 )
                 .subscribe(args => {
                     if (args !== undefined && args.length > 0) {
-                        service.patch(args[0]!.params, args.map(arg => ({path: arg!.path, value: arg!.value})))
+                        service.patch(args[0]!.params, args.map(arg => ({
+                            op: 'replace',
+                            path: arg!.path,
+                            value: arg!.value
+                        })))
                             .subscribe();
                     }
                 })
