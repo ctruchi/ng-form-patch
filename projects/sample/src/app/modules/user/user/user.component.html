@@ -1,7 +1,7 @@
 <h1>User</h1>
-<form>
+<form patch="user" [patch-param]="{id: user.id}">
     <label>
         Name
-        <input type="text" [(ngModel)]="user.name" name="name">
+        <input type="text" [(ngModel)]="user.name" name="name" patch-path="/name">
     </label>
 </form>

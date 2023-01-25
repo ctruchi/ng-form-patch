@@ -1,23 +1,24 @@
 <h1>Project</h1>
 
-<form>
+<form patch="project" [patch-param]="{id: project.id}">
     <label>
         Name
-        <input type="text" [(ngModel)]="project.name" name="name">
+        <input type="text" [(ngModel)]="project.name" name="name" patch-path="/name">
     </label>
     <label>
         Category
-        <select [(ngModel)]="project.metadata.category" name="category">
+        <select [(ngModel)]="project.metadata.category" name="category" patch-path="/metadata/category">
             <option *ngFor="let category of categories" [value]="category">{{category}}</option>
         </select>
     </label>
 
     <h2>Modules</h2>
 
-    <div *ngFor="let module of project.modules" [ngModelGroup]="'module-' + module.id">
+    <div *ngFor="let module of project.modules" [ngModelGroup]="'module-' + module.id"
+         patch="module" [patch-param]="{moduleId: module.id}">
         <label>
             Name
-            <input type="text" [(ngModel)]="module.name" name="name">
+            <input type="text" [(ngModel)]="module.name" name="name" patch-path="/name">
         </label>
         <label>
             Description

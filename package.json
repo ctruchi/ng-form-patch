@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "sample:start": "ng serve sample",
+    "ng-form-patch:start": "ng build --watch --configuration development ng-form-patch",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

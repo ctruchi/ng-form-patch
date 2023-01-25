@@ -1,7 +1,5 @@
-/*
- * Public API Surface of ng-form-patch
- */
-
-export * from './lib/ng-form-patch.service';
-export * from './lib/ng-form-patch.component';
 export * from './lib/ng-form-patch.module';
+
+export * from './lib/patch.directive';
+export * from './lib/patch-param.directive';
+export * from './lib/patch-path.directive';
