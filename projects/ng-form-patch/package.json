@@ -1,9 +1,14 @@
 {
-  "name": "ng-form-patch",
-  "version": "0.0.1",
+  "name": "@ctruchi/ng-form-patch",
+  "version": "0.0.3",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ctruchi/ng-form-patch.git"
+  },
   "peerDependencies": {
-    "@angular/common": "^13.2.0",
-    "@angular/core": "^13.2.0"
+    "@angular/common": "^14.2.8",
+    "@angular/core": "^14.2.8"
   },
   "dependencies": {
     "tslib": "^2.3.0"
