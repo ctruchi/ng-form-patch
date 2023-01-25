@@ -12,7 +12,10 @@ import {NgFormPatchModule} from 'ng-form-patch';
     imports: [
         BrowserModule,
         AppRoutingModule,
-        NgFormPatchModule
+        NgFormPatchModule.forRoot({
+            providers: [],
+            debouncePerField: 400
+        })
     ],
     providers: [],
     bootstrap: [AppComponent]
