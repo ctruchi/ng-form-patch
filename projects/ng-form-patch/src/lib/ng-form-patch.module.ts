@@ -66,7 +66,7 @@ export const FORM_PATCH_SERVICE = new InjectionToken<ReadonlyArray<FormPatchServ
 export interface FormPatchService {
     patchKey: string;
 
-    patch(params: { [key: string]: any }, operations: PatchOperation[]): Observable<void>
+    patch<T>(params: { [key: string]: any }, operations: PatchOperation[]): Observable<T>
 }
 
 export interface PatchOperation {
