@@ -26,7 +26,7 @@ export class PatchPathDirective {
 
         ngModel.valueChanges!
             .pipe(
-                filter(() => !!ngModel.dirty),
+                filter(() => !!ngModel.dirty && !!ngModel.control?.valid),
                 debounceTime(debouncePerField ?? 300))
             .subscribe(value => {
                 patchService.patch(patch.patch, this.patchPath, params.params, value)
